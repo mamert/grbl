@@ -4,8 +4,10 @@
 Fork of https://github.com/gnea/grbl/ (damn good Arduino CNC shield controller, accepts g-code)
 ***
 This fork is meant to be used with cheap clone components - an Arduino-compatible board with a CH340, and a chinese clone of CNC Shield 3.0
+
 That hardware works out of the box with grbl/grbl 0.8, but 0.9 introduced some changes:
-115200 baud, swapped Z-limit+(D12) and sspnEn(D11)
+
+115200 baud, swapped Z-limit+(D12) and SpnEn(D11)
 
 
 So, this fork changes:
@@ -18,7 +20,7 @@ More changes to follow, not necessarily in the same vein
 Misc:
 
 Settings to remember:
-* * $RST=* # reset EEPROM to default
+* $RST=* # reset EEPROM to default
 * laser mode: $32=1. M3 =const.power, M4: dynamic
 * $SLP - only a reset will wake
 * ctrl-x (0x18) soft reset
@@ -27,27 +29,31 @@ Settings to remember:
 
 
 do not use drivers without connected motors (they'll push max current).
+
 do not change motor connections while powered
+
 A4988 are weaker than DRV8825
 
 
 
 ***
 Useful links:
-https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration
-Single-line fonts (for tracing text):
-http://imajeenyus.com/computer/20150110_single_line_fonts/index.shtml#hershey
-http://ncplot.com/stickfont/stickfont.htm
+* https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration
+* Single-line fonts (for tracing text):
+* http://imajeenyus.com/computer/20150110_single_line_fonts/index.shtml#hershey
+* http://ncplot.com/stickfont/stickfont.htm
 
 
 
-http://diyprojects.eu/arduino-cnc-shield-version-3-0-with-grbl-v0-9/
-http://blog.protoneer.co.nz/arduino-cnc-shield-v3-00-assembly-guide/
-http://www.shapeoko.com/wiki/index.php/G-Code
+* http://diyprojects.eu/arduino-cnc-shield-version-3-0-with-grbl-v0-9/
+* http://blog.protoneer.co.nz/arduino-cnc-shield-v3-00-assembly-guide/
+* http://www.shapeoko.com/wiki/index.php/G-Code
 
 
 image to G-code: makercam.com (https://youtu.be/2xMfkTrx_0U?t=304)
+
 also: inkscape? http://www.instructables.com/id/CNC-Laser-Engraver-With-GRBL-and-Arduino/?ALLSTEPS. Also has settings, compare with https://github.com/grbl/grbl/wiki/Configuring-Grbl-v0.9 (newest: https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration)
+
 https://github.com/villamany/3dpBurner-Image2Gcode/releases
 
 ***
